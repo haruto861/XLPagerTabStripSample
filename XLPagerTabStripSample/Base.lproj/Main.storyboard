@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="MxO-2g-1Wr">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--TITLE-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="Main" id="BYZ-38-t0r" customClass="ParentViewController" customModule="XLPagerTabStripSample" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="M5J-MV-dOp">
+                                <rect key="frame" x="0.0" y="144" width="414" height="752"/>
+                                <viewLayoutGuide key="contentLayoutGuide" id="Yky-IK-dT2"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="9kF-Q0-nwo"/>
+                            </scrollView>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="7eT-jf-5cp" customClass="ButtonBarView" customModule="XLPagerTabStrip">
+                                <rect key="frame" x="0.0" y="88" width="414" height="57"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="57" id="VaT-sB-7is"/>
+                                </constraints>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="tjZ-O2-488">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                            </collectionView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="7eT-jf-5cp" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="2Zl-hs-0V3"/>
+                            <constraint firstItem="7eT-jf-5cp" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="3IA-iV-iM6"/>
+                            <constraint firstItem="M5J-MV-dOp" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="TOB-Pp-PCC"/>
+                            <constraint firstItem="M5J-MV-dOp" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="56" id="cy5-uZ-mHP"/>
+                            <constraint firstItem="7eT-jf-5cp" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="er3-Wh-IWU"/>
+                            <constraint firstItem="M5J-MV-dOp" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="i0a-n9-shs"/>
+                            <constraint firstAttribute="bottom" secondItem="M5J-MV-dOp" secondAttribute="bottom" id="qNv-yc-HIU"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="TITLE" id="75d-Ps-CH0"/>
+                    <connections>
+                        <outlet property="buttonBarView" destination="7eT-jf-5cp" id="bLA-px-PrG"/>
+                        <outlet property="containerView" destination="M5J-MV-dOp" id="mH1-g3-de2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="839.13043478260875" y="-2.6785714285714284"/>
+        </scene>
+        <!--First View Controller-->
+        <scene sceneID="srb-iH-ODy">
+            <objects>
+                <viewController storyboardIdentifier="First" id="NOe-tH-g5F" customClass="FirstViewController" customModule="XLPagerTabStripSample" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ef3-fj-VIS">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="HWN-yz-XbM"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kr7-Qd-zFe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-626.08695652173913" y="766.74107142857144"/>
+        </scene>
+        <!--Second View Controller-->
+        <scene sceneID="hVH-bV-lbk">
+            <objects>
+                <viewController storyboardIdentifier="Second" id="LVi-bx-8ef" customClass="SecondViewController" customModule="XLPagerTabStripSample" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="btE-an-8ef">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="b2g-vY-E3e"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WMc-cs-Bqx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="74" y="767"/>
+        </scene>
+        <!--Third View Controller-->
+        <scene sceneID="pAE-cE-hN5">
+            <objects>
+                <viewController storyboardIdentifier="Third" id="fRm-80-cAE" customClass="ThirdViewController" customModule="XLPagerTabStripSample" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="2w7-u3-BNw">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="C0z-ki-Li2"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ced-wU-80f" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="839" y="767"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="yyW-RN-3pv">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="MxO-2g-1Wr" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="6t2-IF-Rzh">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="khV-R0-poB"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AUL-Wh-pJ3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-100" y="-2.2488755622188905"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
